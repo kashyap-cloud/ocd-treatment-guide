@@ -12,8 +12,16 @@ export default {
         "2xl": "1400px",
       },
     },
+    fontFamily: {
+      heading: ['Lora', 'Georgia', 'serif'],
+      body: ['Inter', 'system-ui', 'sans-serif'],
+    },
     extend: {
       colors: {
+        stone: "hsl(var(--stone))",
+        paper: "hsl(var(--paper))",
+        charcoal: "hsl(var(--charcoal))",
+        teal: "hsl(var(--teal))",
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
