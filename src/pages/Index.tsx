@@ -59,7 +59,7 @@ const Index = () => {
         </ReadingSection>
 
         {/* Specialized Therapy */}
-        <ReadingSection ampersand>
+        <ReadingSection>
           <h3 className="font-heading text-xl md:text-2xl font-semibold text-foreground">
             Specialized Therapy
           </h3>
