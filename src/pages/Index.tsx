@@ -115,7 +115,7 @@ const Index = () => {
         <div className="h-px w-16" style={{ backgroundColor: "hsl(var(--stone))" }} />
 
         {/* Getting Started */}
-        <ReadingSection ampersand>
+        <ReadingSection>
           <h3 className="font-heading text-xl md:text-2xl font-semibold text-foreground">
             How Do You Get Started?
           </h3>
