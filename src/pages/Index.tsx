@@ -181,7 +181,7 @@ const Index = () => {
         </ReadingSection>
 
         {/* Footer breathing room */}
-        <div className="py-24" />
+        <div className="py-10" />
       </div>
     </main>
   );
