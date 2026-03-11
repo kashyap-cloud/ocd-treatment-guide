@@ -6,7 +6,7 @@ const Index = () => {
     <main className="min-h-screen bg-background">
       <div className="mx-auto max-w-[650px] px-6 md:px-8 py-16 md:py-24">
         {/* Hero */}
-        <header className="py-24 md:py-40">
+        <header className="py-12 md:py-20">
           <h1 className="font-heading text-3xl md:text-5xl font-bold leading-tight tracking-tight text-foreground">
             OCD Treatment:
             <br />
