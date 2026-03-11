@@ -7,7 +7,7 @@ interface ReadingSectionProps {
 
 const ReadingSection = ({ children, ampersand }: ReadingSectionProps) => {
   return (
-    <section className="relative py-20 md:py-32">
+    <section className="relative py-10 md:py-14">
       {ampersand && (
         <span
           className="absolute top-8 -left-4 md:-left-16 font-heading text-[12rem] md:text-[16rem] leading-none select-none pointer-events-none"
