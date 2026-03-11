@@ -53,9 +53,6 @@ const Index = () => {
           <h2 className="font-heading text-2xl md:text-3xl font-semibold text-foreground">
             What Treatments Work Best?
           </h2>
-          <p className="mt-8 font-body text-base md:text-lg leading-[1.85] text-foreground">
-            There are two main evidence-based approaches for OCD.
-          </p>
         </ReadingSection>
 
         {/* Specialized Therapy */}
