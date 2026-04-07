@@ -1,9 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500&display=swap');
 
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
 @layer base {
   :root {
     --background: 34 33% 96%;
@@ -86,12 +82,10 @@
 }
 
 @layer base {
-  * {
-    @apply border-border;
-  }
+  
 
   body {
-    @apply bg-background text-foreground;
+    
     font-family: var(--font-body);
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;

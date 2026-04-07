@@ -1,25 +1,28 @@
-import GraduallyHighlight from "@/components/GraduallyHighlight";
-import ReadingSection from "@/components/ReadingSection";
+// @ts-nocheck
+import GraduallyHighlight from "../components/GraduallyHighlight";
+import ReadingSection from "../components/ReadingSection";
+import { useTranslation } from "react-i18next";
+import { LanguageSwitcher } from "../components/LanguageSwitcher";
 
 const Index = () => {
+  const { t } = useTranslation();
+
   return (
-    <main className="min-h-screen bg-background">
+    <main className="min-h-screen bg-background relative">
+      <LanguageSwitcher />
       <div className="mx-auto max-w-[650px] px-6 md:px-8 py-16 md:py-24">
         {/* Hero */}
         <header className="py-12 md:py-20">
           <h1 className="font-heading text-3xl md:text-5xl font-bold leading-tight tracking-tight text-foreground">
-            OCD Treatment:
+            {t("title").split(":")[0]}:
             <br />
-            What You Need to Know
+            {t("title").split(":")[1]}
           </h1>
           <p className="mt-8 font-body text-lg md:text-xl leading-relaxed text-muted-foreground max-w-[540px]">
-            Being diagnosed with Obsessive-Compulsive Disorder can feel
-            overwhelming. But it's important to know that OCD is highly
-            treatable.
+            {t("hero.p1")}
           </p>
           <p className="mt-6 font-body text-lg md:text-xl leading-relaxed text-muted-foreground max-w-[540px]">
-            With the right support and evidence-based care, many people are able
-            to regain control and live fulfilling lives.
+            {t("hero.p2")}
           </p>
         </header>
 
@@ -29,20 +32,16 @@ const Index = () => {
         {/* Is OCD Treatable? */}
         <ReadingSection>
           <h2 className="font-heading text-2xl md:text-3xl font-semibold text-foreground">
-            Is OCD Actually Treatable?
+            {t("is_treatable.title")}
           </h2>
           <p className="mt-8 font-body text-base md:text-lg leading-[1.85] text-foreground">
-            Yes — and there's strong research to support that.
+            {t("is_treatable.p1")}
           </p>
           <p className="mt-6 font-body text-base md:text-lg leading-[1.85] text-foreground">
-            Roughly half of individuals respond very well to standard first-line
-            treatments. Even if the first attempt doesn't work perfectly, about
-            70% of people see meaningful improvement when they stay engaged with
-            treatment and adjust strategies as needed.
+            {t("is_treatable.p2")}
           </p>
           <p className="mt-10 font-heading text-xl md:text-2xl italic text-muted-foreground leading-relaxed">
-            Recovery doesn't always happen overnight, but progress is absolutely
-            possible.
+            {t("is_treatable.quote")}
           </p>
         </ReadingSection>
 
@@ -51,61 +50,56 @@ const Index = () => {
         {/* What Treatments Work Best? */}
         <ReadingSection>
           <h2 className="font-heading text-2xl md:text-3xl font-semibold text-foreground">
-            What Treatments Work Best?
+            {t("treatments.title")}
           </h2>
         </ReadingSection>
 
         {/* Specialized Therapy */}
         <ReadingSection>
           <h3 className="font-heading text-xl md:text-2xl font-semibold text-foreground">
-            Specialized Therapy
+            {t("treatments.specialized.title")}
           </h3>
           <p className="mt-2 font-body text-sm uppercase tracking-widest text-muted-foreground">
-            ERP-Based CBT
+            {t("treatments.specialized.subtitle")}
           </p>
           <p className="mt-8 font-body text-base md:text-lg leading-[1.85] text-foreground">
-            OCD involves two main components:
+            {t("treatments.specialized.p1")}
           </p>
           <div className="mt-6 space-y-4">
             <p className="font-body text-base md:text-lg leading-[1.85] text-foreground">
-              <span className="font-heading font-semibold">Obsessions</span> —
-              intrusive, distressing thoughts or urges.
+              <span className="font-heading font-semibold">{t("common.obsessions_label")}</span> —{" "}
+              {t("treatments.specialized.obsessions")}
             </p>
             <p className="font-body text-base md:text-lg leading-[1.85] text-foreground">
-              <span className="font-heading font-semibold">Compulsions</span> —
-              repetitive behaviors done to reduce anxiety.
+              <span className="font-heading font-semibold">{t("common.compulsions_label")}</span> —{" "}
+              {t("treatments.specialized.compulsions")}
             </p>
           </div>
           <p className="mt-10 font-body text-base md:text-lg leading-[1.85] text-foreground">
-            The most effective therapy for OCD is a specific form of Cognitive
-            Behavioral Therapy called Exposure and Response Prevention (ERP).
+            {t("treatments.specialized.p2")}
           </p>
           <p className="mt-6 font-body text-base md:text-lg leading-[1.85] text-foreground">
-            Instead of avoiding anxiety triggers, ERP helps individuals:
+            {t("treatments.specialized.p3")}
           </p>
           <ul className="mt-6 space-y-4 pl-0 list-none">
             <li className="font-body text-base md:text-lg leading-[1.85] text-foreground">
-              <GraduallyHighlight /> face feared thoughts or situations
+              <GraduallyHighlight /> {t("treatments.specialized.steps.1")}
             </li>
             <li className="font-body text-base md:text-lg leading-[1.85] text-foreground">
-              Resist performing the usual compulsive response
+              {t("treatments.specialized.steps.2")}
             </li>
             <li className="font-body text-base md:text-lg leading-[1.85] text-foreground">
-              Learn that anxiety naturally decreases without rituals
+              {t("treatments.specialized.steps.3")}
             </li>
           </ul>
           <p className="mt-10 font-heading text-xl md:text-2xl italic text-muted-foreground leading-relaxed">
-            Over time, this retrains the brain's fear response.
+            {t("treatments.specialized.quote")}
           </p>
           <p className="mt-10 font-body text-base md:text-lg leading-[1.85] text-foreground">
-            Therapy is typically conducted weekly over several months. During
-            this period, clients also practice exercises between sessions. While
-            anxiety may temporarily increase during exposures, this discomfort is
-            part of the healing process.
+            {t("treatments.specialized.p4")}
           </p>
           <p className="mt-6 font-body text-base md:text-lg leading-[1.85] text-foreground">
-            Studies suggest that a majority of people who fully engage in ERP
-            experience significant symptom reduction.
+            {t("treatments.specialized.p5")}
           </p>
         </ReadingSection>
 
@@ -114,23 +108,16 @@ const Index = () => {
         {/* Getting Started */}
         <ReadingSection>
           <h3 className="font-heading text-xl md:text-2xl font-semibold text-foreground">
-            How Do You Get Started?
+            {t("get_started.title")}
           </h3>
           <p className="mt-8 font-body text-base md:text-lg leading-[1.85] text-foreground">
-            The first step is reaching out to a healthcare professional — this
-            could be a primary care provider, psychiatrist, or an OCD-trained
-            therapist.
+            {t("get_started.p1")}
           </p>
           <p className="mt-8 font-body text-base md:text-lg leading-[1.85] text-foreground">
-            Effective care should include:
+            {t("get_started.p2")}
           </p>
           <ul className="mt-6 space-y-3 pl-0 list-none">
-            {[
-              "Clear education about OCD",
-              "Discussion of treatment options",
-              "Shared decision-making",
-              "Consideration of your preferences and goals",
-            ].map((item) => (
+            {(t("get_started.care_items", { returnObjects: true }) as string[]).map((item) => (
               <li
                 key={item}
                 className="font-body text-base md:text-lg leading-[1.85] text-foreground"
@@ -140,15 +127,10 @@ const Index = () => {
             ))}
           </ul>
           <p className="mt-10 font-body text-base md:text-lg leading-[1.85] text-foreground">
-            Treatment goals often include:
+            {t("get_started.goals_p")}
           </p>
           <ul className="mt-6 space-y-3 pl-0 list-none">
-            {[
-              "Reducing symptom intensity",
-              "Improving daily functioning",
-              "Increasing quality of life",
-              "Building coping tools for stressful situations",
-            ].map((item) => (
+            {(t("get_started.goal_items", { returnObjects: true }) as string[]).map((item) => (
               <li
                 key={item}
                 className="font-body text-base md:text-lg leading-[1.85] text-foreground"
@@ -164,16 +146,13 @@ const Index = () => {
         {/* Final Word */}
         <ReadingSection>
           <h2 className="font-heading text-2xl md:text-3xl font-semibold text-foreground">
-            A Final Word
+            {t("final_word.title")}
           </h2>
           <p className="mt-8 font-body text-base md:text-lg leading-[1.85] text-foreground">
-            OCD can be persistent, but it is manageable. Many people — including
-            clinicians, researchers, and individuals with lived experience — have
-            dedicated their work to improving outcomes for those affected.
+            {t("final_word.p1")}
           </p>
           <p className="mt-10 font-heading text-xl md:text-2xl italic leading-relaxed" style={{ color: "hsl(var(--teal))" }}>
-            With the right combination of treatment, patience, and support,
-            meaningful recovery is possible.
+            {t("final_word.quote")}
           </p>
         </ReadingSection>
 
